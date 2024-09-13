@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #282c34;
+  }
+  
+  .card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    min-width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-height: 570px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures space between elements */
+  }
+  
+  .cardTitle {
+    font-size: 24px;
+    color: #222a41;
+    width: 100%;
+    max-width: 5000px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .inputField {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #333;
+    color: #f1f1f1;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submitButton:hover {
+    background: #265c29;
+  }
+  
+  .errorText {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .link {
+    text-align: center;
+    margin-top: 20px;
+    color: #03161b;
+  }
+  
+  .link a {
+    display: block;
+    text-decoration: none;
+    color: #104250;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+  }
+  
