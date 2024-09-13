@@ -11,7 +11,7 @@ const Login = ({ setToken }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axiosInstance.post('http://localhost:5000/api/users/login', { username, password });
+      const { data } = await axiosInstance.post('https://memory-match-two.vercel.app/api/users/login', { username, password });
       localStorage.setItem('token', data.token);
       setToken(data.token);
       navigate('/dashboard');

@@ -36,7 +36,7 @@ const MemoryGame = ({ username, token }) => {
   const fetchHighScore = async () => {
     try {
       console.log('Fetching high score for username:', username);
-      const { data } = await axios.get(`http://localhost:5000/api/users/highscore/${username}`,{
+      const { data } = await axios.get(`https://memory-match-two.vercel.app/api/users/highscore/${username}`,{
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -75,13 +75,13 @@ const MemoryGame = ({ username, token }) => {
       console.log("thisisworking");
     try {
       // Save score
-      await axios.post('http://localhost:5000/api/users/save-score', { score, moves }, {
+      await axios.post('https://memory-match-two.vercel.app/api/users/save-score', { score, moves }, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
       // Check and update high score
       if (score > highScore) {
-        await axios.put('http://localhost:5000/api/users/update-highscore', { highScore: score }, {
+        await axios.put('https://memory-match-two.vercel.app/api/users/update-highscore', { highScore: score }, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setIsHighScore(true);

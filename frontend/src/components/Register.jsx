@@ -14,7 +14,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      await axios.post('http://localhost:5000/api/users/register', { 
+      await axios.post('https://memory-match-two.vercel.app/api/users/register', { 
         firstName,
         lastName,
         email,

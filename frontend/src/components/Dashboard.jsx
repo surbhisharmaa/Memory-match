@@ -10,12 +10,12 @@ const Dashboard = ({ token, setToken }) => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const { data } = await axios.get('/api/users/highscore', {
+        const { data } = await axios.get('https://memory-match-two.vercel.app/api/users/highscore', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setHighScore(data.highScore);
 
-        const { data: leaderboardData } = await axios.get('/api/users/leaderboard');
+        const { data: leaderboardData } = await axios.get('https://memory-match-two.vercel.app/api/users/leaderboard');
         setLeaderboard(leaderboardData);
       } catch (error) {
         console.error('Error fetching dashboard data:', error);

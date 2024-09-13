@@ -26,7 +26,7 @@ const Profile = ({ token }) => {
 
   const fetchProfileData = async () => {
     try {
-      const { data } = await axios.get('/api/users/profile', {
+      const { data } = await axios.get('https://memory-match-two.vercel.app/api/users/profile', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProfileData(data);
